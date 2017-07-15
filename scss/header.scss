@@ -1,0 +1,47 @@
+@import 'fonts.scss';
+@import '_flex.scss';
+
+.header {
+  @include montserrat-font;
+  font-weight: normal;
+  font-size: 11px;
+  color: #4a4a4a;
+
+  min-height: 40px;
+
+  @include flexbox;
+
+  span.icon-wrapper {
+    @include flex(0, 0, auto);
+    @include align-self(flex-start);
+
+    span.home-button {
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+
+      background: #4a4a4a;
+      font-size: 12px;
+      color: white;
+
+      @include flexbox;
+      @include justify-content(center);
+      @include align-items(center);
+
+      > span {
+        @include flex(0 0 auto);
+
+      }
+    }
+  }
+
+
+
+  .page-info {
+    @include align-self(flex-end);
+    @include flex(1 1 auto);
+
+    text-align: center;
+  }
+
+}
